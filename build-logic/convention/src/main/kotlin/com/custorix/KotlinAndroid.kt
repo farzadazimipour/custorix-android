@@ -36,6 +36,10 @@ internal fun Project.configureKotlinAndroid(
     configureKotlin<KotlinAndroidProjectExtension>()
 
     dependencies {
+        /**
+         * Android Studio includes support for using a number of Java 11+ APIs without requiring a minimum API level for our app.
+         * This means that if we use an API introduced in Android 13 (API level 33) the code also works on all previous versions
+         */
         "coreLibraryDesugaring"(libs.findLibrary("android.desugarJdkLibs").get())
     }
 }

@@ -36,6 +36,7 @@ ksp-gradlePlugin = { group = "com.google.devtools.ksp", name = "com.google.devto
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
+android-library = { id = "com.android.library", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
@@ -43,4 +44,5 @@ ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 # Plugins defined by this project
 custorix-android-application = { id = "custorix.android.application" }
 custorix-android-application-compose = { id = "custorix.android.application.compose" }
+custorix-android-library = { id = "custorix.android.library" }
 

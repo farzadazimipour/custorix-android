@@ -41,5 +41,9 @@ gradlePlugin {
             id = libs.plugins.custorix.android.application.compose.get().pluginId
             implementationClass = "AndroidApplicationComposeConventionPlugin"
         }
+        register("androidLibrary") {
+            id = libs.plugins.custorix.android.library.get().pluginId
+            implementationClass = "AndroidLibraryConventionPlugin"
+        }
     }
 }
