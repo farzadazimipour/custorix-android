@@ -32,6 +32,7 @@ graph LR
   :app --> :core:domain
   :app --> :core:data
   :app --> :core:designsystem
+  :app --> :core:ui
 ```
 
 > KMP version planned in a separate repository.
