@@ -45,5 +45,9 @@ gradlePlugin {
             id = libs.plugins.custorix.android.library.get().pluginId
             implementationClass = "AndroidLibraryConventionPlugin"
         }
+        register("kotlinJvmLibrary") {
+            id = libs.plugins.custorix.kotlin.jvm.library.get().pluginId
+            implementationClass = "JvmLibraryConventionPlugin"
+        }
     }
 }

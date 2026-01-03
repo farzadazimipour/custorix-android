@@ -40,6 +40,7 @@ android-application = { id = "com.android.application", version.ref = "agp" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 modulegraph = { id = "dev.iurysouza.modulegraph", version.ref = "modulegraph" }
 
@@ -47,4 +48,5 @@ modulegraph = { id = "dev.iurysouza.modulegraph", version.ref = "modulegraph" }
 custorix-android-application = { id = "custorix.android.application" }
 custorix-android-application-compose = { id = "custorix.android.application.compose" }
 custorix-android-library = { id = "custorix.android.library" }
+custorix-kotlin-jvm-library = { id = "custorix.kotlin.jvm.library" }
 
