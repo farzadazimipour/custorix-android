@@ -1,13 +1,11 @@
 package com.custorix
 
 import com.android.build.api.dsl.CommonExtension
-import org.gradle.api.JavaVersion
 import org.gradle.api.Project
 import org.gradle.api.plugins.JavaPluginExtension
 import org.gradle.kotlin.dsl.assign
 import org.gradle.kotlin.dsl.configure
 import org.gradle.kotlin.dsl.dependencies
-import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.dsl.KotlinAndroidProjectExtension
 import org.jetbrains.kotlin.gradle.dsl.KotlinBaseExtension
 import org.jetbrains.kotlin.gradle.dsl.KotlinJvmProjectExtension
@@ -20,17 +18,17 @@ internal fun Project.configureKotlinAndroid(
     commonExtension: CommonExtension<*, *, *, *, *, *>,
 ) {
     commonExtension.apply {
-        compileSdk = 36
+        compileSdk = ProjectConfig.COMPILE_SDK
 
         defaultConfig {
-            minSdk = 24
+            minSdk = ProjectConfig.MIN_SDK
         }
 
         compileOptions {
             // Up to Java 11 APIs can be available through desugaring
             // https://developer.android.com/studio/write/java11-minimal-support-table
-            sourceCompatibility = JavaVersion.VERSION_21
-            targetCompatibility = JavaVersion.VERSION_21
+            sourceCompatibility = ProjectConfig.JAVA_VERSION
+            targetCompatibility = ProjectConfig.JAVA_VERSION
             isCoreLibraryDesugaringEnabled = true
         }
     }
@@ -49,8 +47,8 @@ internal fun Project.configureKotlinJvm() {
     extensions.configure<JavaPluginExtension> {
         // Up to Java 11 APIs are available through desugaring
         // https://developer.android.com/studio/write/java11-minimal-support-table
-        sourceCompatibility = JavaVersion.VERSION_21
-        targetCompatibility = JavaVersion.VERSION_21
+        sourceCompatibility = ProjectConfig.JAVA_VERSION
+        targetCompatibility = ProjectConfig.JAVA_VERSION
     }
 
     configureKotlin<KotlinJvmProjectExtension>()
@@ -73,7 +71,7 @@ private inline fun <reified T : KotlinBaseExtension> Project.configureKotlin() =
         // TODO: move remove languageVersion and coreLibrariesVersion after upgrading to AGP 9.0
         languageVersion.set(KotlinVersion.KOTLIN_2_2)
         coreLibrariesVersion = "2.2.21"
-        jvmTarget = JvmTarget.JVM_21
+        jvmTarget = ProjectConfig.JVM_TARGET
         allWarningsAsErrors = warningsAsErrors
         freeCompilerArgs.add(
             // Enable experimental coroutines APIs, including Flow
