@@ -24,7 +24,8 @@ rootProject.name = "Custorix"
 
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 include(":app")
-include(":core:data")
 include(":core:domain")
+include(":core:data")
+include(":core:database")
 include(":core:designsystem")
 include(":core:ui")
