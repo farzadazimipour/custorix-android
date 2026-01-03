@@ -32,7 +32,6 @@ graph LR
   :core:data --> :core:database
   :core:data --> :core:network
   :app --> :core:domain
-  :app --> :core:data
   :app --> :core:designsystem
   :app --> :core:ui
 ```
