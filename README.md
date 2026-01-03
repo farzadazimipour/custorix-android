@@ -30,6 +30,7 @@ Modern Android app built with Kotlin, Jetpack Compose, and Clean Architecture.
 graph LR
   :core:data --> :core:domain
   :core:data --> :core:database
+  :core:data --> :core:network
   :app --> :core:domain
   :app --> :core:data
   :app --> :core:designsystem
