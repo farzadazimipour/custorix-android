@@ -4,4 +4,14 @@ plugins {
     alias(libs.plugins.android.library) apply false
     alias(libs.plugins.kotlin.android) apply false
     alias(libs.plugins.kotlin.compose) apply false
+    alias(libs.plugins.modulegraph)
+}
+
+/***
+ * How to Use: ./gradlew createModuleGraph
+ */
+moduleGraphConfig {
+    readmePath.set("./README.md")
+    heading = "### Module Graph"
+    showFullPath = true
 }

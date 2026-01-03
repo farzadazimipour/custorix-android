@@ -18,4 +18,17 @@ Modern Android app built with Kotlin, Jetpack Compose, and Clean Architecture.
 - Coroutines + Flow
 - Hilt
 
+### Module Graph
+
+```mermaid
+%%{
+  init: {
+    'theme': 'neutral'
+  }
+}%%
+
+graph LR
+  :app --> :core:data
+```
+
 > KMP version planned in a separate repository.
