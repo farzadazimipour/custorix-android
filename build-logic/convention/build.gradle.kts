@@ -42,8 +42,12 @@ gradlePlugin {
             implementationClass = "AndroidApplicationComposeConventionPlugin"
         }
         register("androidLibrary") {
-            id = libs.plugins.custorix.android.library.get().pluginId
+            id = libs.plugins.custorix.android.library.asProvider().get().pluginId
             implementationClass = "AndroidLibraryConventionPlugin"
+        }
+        register("androidLibraryCompose") {
+            id = libs.plugins.custorix.android.library.compose.get().pluginId
+            implementationClass = "AndroidLibraryComposeConventionPlugin"
         }
         register("kotlinJvmLibrary") {
             id = libs.plugins.custorix.kotlin.jvm.library.get().pluginId

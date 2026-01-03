@@ -48,5 +48,6 @@ modulegraph = { id = "dev.iurysouza.modulegraph", version.ref = "modulegraph" }
 custorix-android-application = { id = "custorix.android.application" }
 custorix-android-application-compose = { id = "custorix.android.application.compose" }
 custorix-android-library = { id = "custorix.android.library" }
+custorix-android-library-compose = { id = "custorix.android.library.compose" }
 custorix-kotlin-jvm-library = { id = "custorix.kotlin.jvm.library" }
 
