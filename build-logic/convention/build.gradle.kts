@@ -53,5 +53,9 @@ gradlePlugin {
             id = libs.plugins.custorix.kotlin.jvm.library.get().pluginId
             implementationClass = "JvmLibraryConventionPlugin"
         }
+        register("hilt") {
+            id = libs.plugins.custorix.hilt.get().pluginId
+            implementationClass = "HiltConventionPlugin"
+        }
     }
 }

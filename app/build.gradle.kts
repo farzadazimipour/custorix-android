@@ -3,6 +3,7 @@ import com.custorix.CustorixBuildType
 plugins {
     alias(libs.plugins.custorix.android.application)
     alias(libs.plugins.custorix.android.application.compose)
+    alias(libs.plugins.custorix.hilt)
 }
 
 android {
@@ -35,6 +36,7 @@ android {
 
 dependencies {
     implementation(projects.core.domain)
+    implementation(projects.core.data)
     implementation(projects.core.designsystem)
     implementation(projects.core.ui)
 

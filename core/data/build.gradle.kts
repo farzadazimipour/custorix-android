@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.custorix.android.library)
+    alias(libs.plugins.custorix.hilt)
 }
 
 android {
