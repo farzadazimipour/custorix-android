@@ -23,6 +23,8 @@ Modern Android app built with Kotlin, Jetpack Compose, and Clean Architecture.
 ### Dependency Injection with Hilt
 
 The app module includes a dependency on `core:data` solely for Hilt dependency injection:
+This violates clean architecture but is required for Hilt to discover @Binds annotations.
+All data module classes are internal - UI layer only accesses domain interfaces.
 
 ```kotlin
 implementation(projects.core.data) // Only for Hilt DI bindings
