@@ -18,6 +18,16 @@ Modern Android app built with Kotlin, Jetpack Compose, and Clean Architecture.
 - Coroutines + Flow
 - Hilt
 
+## Architecture Notes
+
+### Dependency Injection with Hilt
+
+The app module includes a dependency on `core:data` solely for Hilt dependency injection:
+
+```kotlin
+implementation(projects.core.data) // Only for Hilt DI bindings
+```
+
 ### Module Graph
 
 ```mermaid
