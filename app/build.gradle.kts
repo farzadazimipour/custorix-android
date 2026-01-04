@@ -35,8 +35,13 @@ android {
 }
 
 dependencies {
-    implementation(projects.core.domain)
+    /**
+     * App depends on data module only for Hilt DI bindings (DataModule)
+     * This violates clean architecture but is required for Hilt to discover @Binds annotations
+     * All data module classes are internal - UI layer only accesses domain interfaces
+     */
     implementation(projects.core.data)
+    implementation(projects.core.domain)
     implementation(projects.core.designsystem)
     implementation(projects.core.ui)
 
