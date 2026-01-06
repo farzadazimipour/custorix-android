@@ -11,6 +11,7 @@ lifecycleRuntimeKtx = "2.10.0"
 activityCompose = "1.12.2"
 composeBom = "2025.12.01"
 hilt = "2.57.2"
+arrow = "2.2.1.1"
 modulegraph = "0.13.0"
 
 [libraries]
@@ -31,6 +32,7 @@ androidx-compose-material3 = { group = "androidx.compose.material3", name = "mat
 hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
 hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hilt" }
 hilt-core = { group = "com.google.dagger", name = "hilt-core", version.ref = "hilt" }
+arrow-core = { group = "io.arrow-kt", name = "arrow-core", version.ref = "arrow" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 
 # Dependencies of the included build-logic

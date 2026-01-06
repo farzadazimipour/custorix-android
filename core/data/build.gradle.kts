@@ -11,4 +11,6 @@ dependencies {
     implementation(projects.core.domain)
     implementation(projects.core.database)
     implementation(projects.core.network)
+
+    implementation(libs.arrow.core)
 }

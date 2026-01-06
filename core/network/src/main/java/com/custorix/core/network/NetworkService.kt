@@ -1,5 +1,9 @@
 package com.custorix.core.network
 
+import arrow.core.Either
+
 object NetworkService {
-    fun getSampleData() : String  = "Hello From Network Module"
+    fun getSampleData(): Either<Nothing, String> {
+        return Either.Right("Hello From Network Module")
+    }
 }

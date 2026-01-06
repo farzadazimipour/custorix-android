@@ -6,6 +6,9 @@ import javax.inject.Inject
 
 internal class TestRepositoryImpl @Inject constructor() : TestRepository {
     override fun getSampleData(): String {
-        return NetworkService.getSampleData()
+        return NetworkService.getSampleData().fold(
+            ifRight = { it },
+            ifLeft = { "Error from Data layer" }
+        )
     }
 }
