@@ -1,6 +1,5 @@
-package com.custorix.app.ui.theme
+package com.custorix.core.designsystem.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme

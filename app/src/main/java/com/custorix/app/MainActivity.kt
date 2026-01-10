@@ -11,7 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.custorix.app.ui.theme.CustorixTheme
+import com.custorix.core.designsystem.theme.CustorixTheme
 import com.custorix.core.domain.TestRepository
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
