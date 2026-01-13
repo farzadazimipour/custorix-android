@@ -8,4 +8,5 @@ android {
 
 dependencies {
     implementation(libs.arrow.core)
+    implementation(libs.kotlinx.serialization.json)
 }
