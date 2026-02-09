@@ -9,7 +9,6 @@ import org.gradle.kotlin.dsl.dependencies
 import org.jetbrains.kotlin.gradle.dsl.KotlinAndroidProjectExtension
 import org.jetbrains.kotlin.gradle.dsl.KotlinBaseExtension
 import org.jetbrains.kotlin.gradle.dsl.KotlinJvmProjectExtension
-import org.jetbrains.kotlin.gradle.dsl.KotlinVersion
 
 /**
  * Configure base Kotlin with Android options
@@ -70,9 +69,6 @@ private inline fun <reified T : KotlinBaseExtension> Project.configureKotlin() =
         is KotlinJvmProjectExtension -> compilerOptions
         else -> TODO("Unsupported project extension $this ${T::class}")
     }.apply {
-        // TODO: move remove languageVersion and coreLibrariesVersion after upgrading to AGP 9.0
-        languageVersion.set(KotlinVersion.KOTLIN_2_2)
-        coreLibrariesVersion = "2.2.21"
         jvmTarget = ProjectConfig.JVM_TARGET
         allWarningsAsErrors = warningsAsErrors
         freeCompilerArgs.add(
@@ -91,7 +87,7 @@ private inline fun <reified T : KotlinBaseExtension> Project.configureKotlin() =
              * The binary signature changes. The error on the declaration is no longer reported.
              * '-Xconsistent-data-class-copy-visibility' compiler flag and ConsistentCopyVisibility annotation are now unnecessary.
              */
-            "-Xconsistent-data-class-copy-visibility"
+            "-Xconsistent-data-class-copy-visibility",
         )
     }
 }
