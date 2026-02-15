@@ -1,5 +1,6 @@
-package com.custorix.core.data
+package com.custorix.core.data.di
 
+import com.custorix.core.data.repository.TestRepositoryImpl
 import com.custorix.core.domain.TestRepository
 import dagger.Binds
 import dagger.Module

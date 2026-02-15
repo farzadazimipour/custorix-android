@@ -1,5 +1,5 @@
 package com.custorix.core.domain
 
 interface TestRepository {
-    fun getSampleData(): String
+    suspend fun getSampleData(): String
 }
