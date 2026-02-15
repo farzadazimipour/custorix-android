@@ -23,6 +23,7 @@ dependencies {
     compileOnly(libs.compose.gradlePlugin)
     compileOnly(libs.kotlin.gradlePlugin)
     compileOnly(libs.ksp.gradlePlugin)
+    compileOnly(libs.room.gradlePlugin)
     implementation(libs.truth)
 }
 
@@ -58,6 +59,10 @@ gradlePlugin {
         register("hilt") {
             id = libs.plugins.custorix.hilt.get().pluginId
             implementationClass = "HiltConventionPlugin"
+        }
+        register("androidRoom") {
+            id = libs.plugins.custorix.android.room.get().pluginId
+            implementationClass = "AndroidRoomConventionPlugin"
         }
     }
 }
